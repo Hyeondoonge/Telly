@@ -79,10 +79,9 @@ const renderTodoList = (userId, todoList) => {
     const list = lists[i++].children[1];
     let html = "";
     todoList[key].forEach(({ name, marked }) => {
-      html += `<div class="list-item pt-2 pb-2 pr-2 mb-2" draggable="true">
-            <a class="text-secondary ml-4">`;
-      if (marked === "true") html += `<mark>${name}</mark>`;
-      else html += name;
+      html += `<div class="list-item pt-2 pb-2 pr-2 mb-2" draggable="true">`;
+      if (marked === "true") html += `<a class="text-secondary ml-4 marked">${name}</a>`;
+      else html += `<a class="text-secondary ml-4">${name}</a>`;
       html += `</a>
             <button type="button" class="close close-btn" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -289,26 +288,29 @@ const removeBtnHandler = () => {
 
 const markToggleHandler = () => {
   let { target } = event;
-  if (target.matches("div")) target = target.children[0];
-  else if (target.matches("mark")) target = target.parentNode;
+  const item = target.closest('.list-item').children[0];
 
-  let name, marked;
-
-  if (target.children.length !== 0) {
-    name = target.children[0].innerHTML;
+  if (item.classList.contains('marked')) {
     marked = "false";
   } else {
-    name = target.innerHTML;
     marked = "true";
   }
 
+  item.classList.toggle('marked');
+
   const project = document.querySelector(".project").innerHTML;
   const state = target.closest(".list").classList[2];
+  console.log(item);
+
+  const name = item.innerHTML;
   const data = {
     state,
     name,
     marked,
   };
+
+  console.log('send data...');
+  console.log(data);
 
   fetch(`http://127.0.0.1:4000/project/todo/mark/${project}`, {
     method: "PUT",
@@ -318,10 +320,7 @@ const markToggleHandler = () => {
   })
     .then((res) => res.json())
     .then(({ msg }) => {
-      if (msg === "success") {
-        if (!marked) target.innerHTML = name;
-        else target.innerHTML = `<mark>${name}</mark>`;
-      }
+      console.log(msg);
     });
 };
 

@@ -165,3 +165,7 @@ a:hover {
   border-radius: 5px;
   background-color: rgb(197, 197, 197);
 }
+
+.marked {
+  background-color: rgb(247, 247, 83);
+}
