@@ -58,7 +58,7 @@ projectRouter.post("/todo/:project", async (ctx) => {
   const user = ctx.session.id;
   const { state, name } = ctx.request.body;
   const data = {};
-  data[state] = { name, marked: false };
+  data[state] = { name, marked: 'false' };
 
   await ctx.db
     .collection("TodoList")
@@ -102,20 +102,22 @@ projectRouter.put("/todo/mark/:project", async (ctx) => {
   const user = ctx.session.id;
   const project = ctx.params.project;
   const { state, name, marked } = ctx.request.body;
-
-  const originData = {};
-  originMarked = marked === "true" ? "false" : "true";
-  originData[state] = { name, marked: originMarked };
+  const originMarked = marked  === "true"?  "false" : "true";
 
   const updatedData = {};
   updatedData[`${state}.$`] = { name, marked };
+  console.log(updatedData);
 
-  console.log(originData);
+  const findData = {};
+  findData._id = { user, project };
+  findData[state] = { name, marked: originMarked };
+
+  console.log(findData);
   console.log(updatedData);
 
   await ctx.db
     .collection("TodoList")
-    .updateOne({ _id: { user, project }, originData }, { $set: updatedData });
+    .updateOne(findData, { $set: updatedData });
 
   ctx.body = JSON.stringify({ msg: "success" });
   ctx.set({
