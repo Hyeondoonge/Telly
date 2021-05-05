@@ -1,31 +1,37 @@
 # Single Page Application
 
-## 필수 구현 목록
+## Description
+spa기반의 TodoList 애플리케이션 Telly.
 
-- ✔사용자 개념이 필요합니다.
-- 프로젝트는 private, public로 구분이 되며, private는 다른 사용자에게 보이지 않습니다.
-- 다른 사용자는 public 일정이어도 수정은 불가능합니다.
-- ✔일정은 다른 task로 이동이 가능합니다.
-- ✔같은 task 내의 일정은 순서가 유지되며, 재접속에도 유지가 되어야 합니다.
+## Installation
 
-## 선택 구현 목록
+Server(npm version(7.10.0))
+```
+npm install
+```
 
-- ✔새로고침을해도 로그인이 풀리지 않습니다.
-- 다른 사용자의 일정을 확인할 수 있습니다.
-- 일정 권한을 읽기 / 수정까지 포함합니다.
+Client
+```
+npm install
+```
 
-## 선택 사항
+## Start
 
-- ‍✔jQuery를 사용하지 않고 구현합니다.
-- team 접근권한과, team을 구현합니다. team 멤버는 team 일정까지 열람이 가능합니다.
-- ✔Drag & Drop으로 일정의 이동이 가능합니다.
-- 이동 애니메이션을 적용합니다.
-- ✔webpack을 적용합니다.
+Server
+```
+node app
+```
 
 ## 기술 스택
-- Koa, koa-mongo
-- Rest API
-- Hash Routing
+- 언어
+javascript
 
-🛠서버관리 도구
-nodemon, pm2
+- 프레임 워크
+koa
+
+- db
+mongoDB
+
+- 그 외
+RESTfulAPI
+Hash Routing
