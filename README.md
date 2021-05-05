@@ -1,4 +1,4 @@
-# Single Page Application
+# Telly
 
 ## Description
 spa기반의 TodoList 애플리케이션 Telly.
@@ -23,15 +23,20 @@ node app
 ```
 
 ## 기술 스택
-- 언어
+### 언어
 javascript
 
-- 프레임 워크
+### 프레임 워크
 koa
 
-- db
+### db
 mongoDB
 
-- 그 외
+### 그 외
 RESTfulAPI
 Hash Routing
+
+## 주요 기능
+1. 프로젝트 생성
+2. D & D를 이용한 작업 상태 변경
+3. 중요한 작업 마킹
