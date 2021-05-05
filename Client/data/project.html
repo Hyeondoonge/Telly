@@ -1,0 +1,94 @@
+<div class="middle">
+  <div class="title">
+    &nbsp;
+    <span class="user font-italic text-secondary"></span>
+    <span class="font-italic">👻 Project :</span>
+    <span class="project font-italic font-weight-bold text-primary"></span>
+  </div>
+  <div class="row board-container"
+    style="width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: space-around;">
+    <div class="search" style="width: 21%; padding:0.5%">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="signout nav-link active" href="#signOut" style="cursor: pointer;">Sign out</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#userPage" style="cursor: pointer;">Your projects</a>
+        </li>
+      </ul>
+      <form>
+        <div class="input-group col-sm-12">
+          <input type="text" class="form-control" placeholder="Search other members!">
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <ul class="list-group col-sm-11 list-group-flush" style="overflow: auto">
+      <!--<li class="list-group-item">Vestibulum at eros</li> -->  
+      </ul>
+    </div>
+    <div class="list mt-3 todo">
+      <div class="list-header ml-4 mt-3 mb-3">
+        <h4>To Do</h4>
+      </div>
+      <div class="todo-list-items col-sm-12">
+      </div>
+      <div class="add-item-container col-sm-12">
+        <div class="add-item pt-2 pb-2">
+          <!--list-item-->
+          <a class="text-secondary ml-4">+ Add your new thing todo!</a>
+        </div>
+        <div class="form-group pb-2" style="display: none">
+          <textarea class="form-control" rows="1" id="newTodo" name="newTodo"
+            placeholder="Enter a title for your new todo..."></textarea>
+          <button type="button" class="close close-btn" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="list mt-3 doing">
+      <div class="list-header ml-4 mt-3 mb-3">
+        <h4>Doing</h4>
+      </div>
+      <div class="doing-list-items col-sm-12">
+      </div>
+      <div class="add-item-container col-sm-12">
+        <div class="add-item pt-2 pb-2">
+          <!--list-item-->
+          <a class="text-secondary ml-4">+ Add your new thing doing!</a>
+        </div>
+        <div class="form-group pb-2" style="display: none">
+          <textarea class="form-control" rows="1" id="newDoing" name="newDoing"
+            placeholder="Enter a title for your new doing..."></textarea>
+          <button type="button" class="close close-btn" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="list mt-3 done">
+      <div class="list-header ml-4 mt-3 mb-3">
+        <h4>Done</h4>
+      </div>
+      <div class="done-list-items col-sm-12">
+      </div>
+      <div class="add-item-container col-sm-12">
+        <div class="add-item pt-2 pb-2">
+          <!--list-item-->
+          <a class="text-secondary ml-4">+ Add your new thing done!</a>
+        </div>
+        <div class="form-group pb-2" style="display: none">
+          <textarea class="form-control" rows="1" id="newDone" name="newDone"
+            placeholder="Enter a title for your new done..."></textarea>
+          <button type="button" class="close close-btn" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
