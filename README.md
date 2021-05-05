@@ -1,10 +1,10 @@
 # Telly
 
-## Description
+## 소개
 spa기반의 TodoList 애플리케이션 Telly.
 
 ***
-## Installation
+## 설치
 
 Server(npm version(7.10.0))
 ```
@@ -17,7 +17,7 @@ npm install
 ```
 
 ***
-## Start
+## 시작
 
 Server
 ```
