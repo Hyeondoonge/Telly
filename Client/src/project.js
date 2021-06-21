@@ -1,6 +1,6 @@
-// 나중에 객체로 만들깅
+import "../public/project.css";
 
-const loadHandler = (chooseProject) => {
+export default function loadHandler (chooseProject) {
   fetch(`http://127.0.0.1:4000/project/todo/${chooseProject}`, {
     // userId, projectName 받아와서 기본세팅
     method: "GET",
@@ -325,8 +325,4 @@ const markToggleHandler = () => {
     .then(({ msg }) => {
       console.log(msg);
     });
-};
-
-module.exports = {
-  loadHandler,
 };

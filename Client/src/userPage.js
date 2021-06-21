@@ -1,4 +1,6 @@
-const loadHandler = () => {
+import "../public/userpage.css";
+
+export default function loadHandler () {
   fetch("http://127.0.0.1:4000/user/projects", {
     method: "GET",
     credentials: "include",
@@ -173,5 +175,3 @@ const downOpacity = () => {
   header.style.opacity = 0.2;
   middle.style.opacity = 0.2;
 };
-
-module.exports = { loadHandler };

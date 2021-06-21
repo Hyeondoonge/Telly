@@ -1,4 +1,6 @@
-const loadHandler = () => {
+import "../public/login.css";
+
+export default function loadHandler () {
   const signupBtn = document.querySelector(".btn");
   signupBtn.addEventListener("click", signupBtnHandler);
 };
@@ -34,5 +36,3 @@ const signupBtnHandler = () => {
       else alert(msg);
     });
 };
-
-module.exports = { loadHandler };

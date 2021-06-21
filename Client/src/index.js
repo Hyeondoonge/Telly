@@ -1,8 +1,8 @@
-import "./index.css";
-import * as Login from "./login.js";
-import * as SignUp from "./signUp.js";
-import * as Project from "./project.js";
-import * as UserPage from "./userPage.js";
+import "../public/index.css";
+import LoginLoadHandler from "./login.js";
+import SignUpLoadHandler from "./signUp.js";
+import ProjectLoadHandler from "./project.js";
+import UserPageLoadHandler from "./userPage.js";
 
 const root = document.querySelector(".root");
 
@@ -17,20 +17,20 @@ const routes = {
 const init = (hash, data) => {
   switch (hash) {
     case "":
-      Login.loadHandler();
+      LoginLoadHandler();
       break;
     case "signOut":
       data = "signout";
-      Login.loadHandler(data);
+      LoginLoadHandler(data);
       break;
     case "signUp":
-      SignUp.loadHandler();
+      SignUpLoadHandler();
       break;
     case "userPage":
-      UserPage.loadHandler();
+      UserPageLoadHandler;
       break;
     case "project":
-      Project.loadHandler(data);
+      ProjectLoadHandler(data);
       break;
     default:
       break;

@@ -1,4 +1,6 @@
-const loadHandler = (data) => {
+import "../public/login.css";
+
+export default function loadHandler (data) {
   if (data) signOut();
 
   const signinBtn = document.querySelector(".btn");
@@ -46,5 +48,3 @@ const signOut = () => {
       // hashchange
     });
 };
-
-module.exports = { loadHandler };
